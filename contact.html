@@ -1,50 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - My Study Abroad Blog</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
 </head>
 <body>
-  <!-- Header & Navigation -->
-  <header>
-    <h1>My Study Abroad Blog</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <h1>Contact Me</h1>
 
-  <main>
-    <h2>Contact Me</h2>
-    <p>
-      Have questions, opportunities, or just want to say hi? Fill out the form below and I’ll get back to you soon!
-    </p>
+  <form name="contact" method="POST" data-netlify="true">
+    <!-- Hidden input required for Netlify -->
+    <input type="hidden" name="form-name" value="contact" />
 
-    <form name="mi349_blog" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="mi349_blog" />
+    <!-- Name Field -->
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
 
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+    <!-- Email Field -->
+    <label for="email">Email Address:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+    <!-- Reason Dropdown -->
+    <label for="reason">Reason for Contact:</label><br>
+    <select id="reason" name="reason" required>
+      <option value="">--Please choose an option--</option>
+      <option value="saying-hi">Saying hi</option>
+      <option value="looking-for-contractor">Looking for a contractor</option>
+      <option value="interested-in-interview">Interested in an interview</option>
+    </select><br><br>
 
-      <label for="title">Blog Title:</label>
-      <input type="text" id="title" name="title" required>
+    <!-- Message Textarea -->
+    <label for="message">Comments:</label><br>
+    <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-      <label for="content">Post Content:</label>
-      <textarea id="content" name="content" required></textarea>
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+  </form>
 
-      <button type="submit">Submit</button>
-    </form>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Brianna Boone</p>
-  </footer>
 </body>
 </html>
