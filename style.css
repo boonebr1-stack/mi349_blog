@@ -4,7 +4,9 @@ body {
 
 h1 {
     color: #0a0a0a;
-    font-size: 5em;
+    font-size: 48px;
+    font-family: 'Tangerine', serif;
+    text-shadow: 4px 4px 4px #aaa;
     background: #ccc
     margin: 50px;
     padding: 20px;
